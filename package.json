@@ -1,0 +1,22 @@
+{
+  "name": "@oga-fit/calculator",
+  "version": "1.0.0",
+  "description": "Calculator to calculate BMI & TDEE",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oga-fit/calculator.git"
+  },
+  "author": "Oga Fit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oga-fit/calculator/issues"
+  },
+  "homepage": "https://github.com/oga-fit/calculator#readme",
+  "dependencies": {
+    "iifym.js": "^1.0.0"
+  }
+}
