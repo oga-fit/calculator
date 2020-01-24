@@ -1,15 +1,17 @@
-const iifym = require("iifym.js");
+// const iifym = require("iifym.js");
+import iifym from "iifym.js";
 
 /**
- * @param {Number} weight         Weight as a number.
- * @param {Number} height         Height as a number in metric.
- * @param {Number} age            Age as a number.
- * @param {String} gender         Gender as a string either "male" or "female".
- * @param {Boolean} isMetric      isMetric as Boolean.
+ * @param {Object} config - TDEE calculator parameters
+ * @param {Number} config.weight - Weight as a number.
+ * @param {Number} config.height - Height as a number in metric.
+ * @param {Number} config.age - Age as a number.
+ * @param {String} config.gender - Gender as a string either "male" or "female".
+ * @param {Boolean} [config.isMetric=true] - isMetric as Boolean.
  *
  * @returns {Number} Returns TDEE value.
  */
-module.exports = ({ weight, height, age, gender, isMetric = true }) => {
+const tdee = ({ weight, height, age, gender, isMetric = true }) => {
   if (!weight) return console.error("'weight' is a required property!"); // Check if weight is given.
   if (!height) return console.error("'height' is a required property!"); // Check if height is given.
   if (!age) return console.error("'age' is a required property!"); // Check if height is given.
@@ -30,3 +32,5 @@ module.exports = ({ weight, height, age, gender, isMetric = true }) => {
 
   return tdee;
 };
+
+export default tdee;

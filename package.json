@@ -1,10 +1,13 @@
 {
-  "name": "@oga-fit/calculator",
-  "version": "1.0.0",
+  "name": "@oga-fit/toolkit",
+  "version": "1.0.1",
   "description": "Calculator to calculate BMI & TDEE",
-  "main": "index.js",
+  "main": "src",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,11 @@
   "homepage": "https://github.com/oga-fit/calculator#readme",
   "dependencies": {
     "iifym.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
